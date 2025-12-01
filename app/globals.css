@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-950 text-slate-50 font-sans;
+  background-image: theme("backgroundImage.lighthouse-gradient");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.9);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.8);
+  border-radius: 999px;
+}
+
+/* Glassmorphism utilities */
+.glass-card {
+  @apply bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 shadow-xl shadow-slate-900/60;
+}
+
+/* Pill buttons */
+.btn-pill {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium transition;
+}
+
+.btn-primary {
+  @apply btn-pill bg-lighthouse-blue text-white shadow-glow-blue hover:bg-lighthouse-blue/90 hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply btn-pill bg-white/5 text-slate-100 border border-slate-600/60 hover:bg-white/10;
+}
+
+/* Section max-width helper */
+.section-shell {
+  @apply w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Simple badge */
+.badge-soft {
+  @apply inline-flex items-center gap-2 rounded-full border border-lighthouse-lightBlue/40 bg-lighthouse-lightBlue/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.15em] text-lighthouse-lightBlue;
+}
